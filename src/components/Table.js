@@ -1,7 +1,17 @@
 import React, { useState } from 'react'
 
 const Table = ({ data }) => {
-    const [showData, setShowData] = useState(false);
+    // const [showData, setShowData] = useState(false);
+    function sortFunction(a, b) {
+        if (a.timestamp === b.timestamp) {
+            return 0;
+        }
+        else {
+            return (a.timestamp < b.timestamp) ? -1 : 1;
+        }
+    }
+
+    data.sort(sortFunction);
 
     return (
         <>
@@ -14,8 +24,11 @@ const Table = ({ data }) => {
                 />
                 <label className="form-check-text m-2 text-white font-semibold">Show Data</label>
             </div> */}
+            <div className='mt-8 w-[60%] flex justify-center items-center text-center'>
+                <h1 className='text-xl font-semibold'><span className='font-bold italics'>{data.length}</span> data instance!</h1>
+            </div>
             
-            <table className='mx-2 mt-8 table-fixed border-collapse border-gray-300'>
+            <table className='mx-2 mt-4 table-fixed border-collapse border-gray-300'>
                 <thead>
                     <tr className='m-1 border border-gray-300'>
                         <th className='p-1 border border-gray-300'>Timestamp</th>

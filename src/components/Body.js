@@ -25,7 +25,7 @@ const Body = () => {
 
     const search = (queryString) => {
         return queryString.filter((item) =>
-            keys?.some((key) => item[key]?.toString()?.includes(query))
+            keys?.some((key) => item[key]?.toString()?.toLowerCase()?.includes(query))
         );
     };
 
@@ -51,9 +51,9 @@ const Body = () => {
             <div className="m-4 p-1 border border-gray-300 rounded-lg w-[40%]">
                 <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="This search option is case sensitive..."
                     className="search-box w-full  h-10 "
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={(e) => setQuery(e?.target?.value?.toLowerCase())}
                 />
             </div>
 
