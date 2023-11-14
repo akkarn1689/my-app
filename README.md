@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+**Functions Implemented :**
+1. Displaying the data for the input search query
+2. Search functionality with respect to selected data field 
+3. Sorting of data with respect to timestamp
+4. Display the count of data instances for input search query
