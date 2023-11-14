@@ -25,7 +25,7 @@ const Table = ({ data }) => {
                 <label className="form-check-text m-2 text-white font-semibold">Show Data</label>
             </div> */}
             <div className='mt-8 w-[60%] flex justify-center items-center text-center'>
-                <h1 className='text-xl font-semibold'><span className='font-bold italics'>{data.length}</span> data instance!</h1>
+                <h1 className='text-xl font-semibold'><span className='text-blue-700 font-bold italic'>{data.length}</span> data instances!</h1>
             </div>
             
             <table className='mx-2 mt-4 table-fixed border-collapse border-gray-300'>

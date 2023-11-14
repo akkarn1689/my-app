@@ -51,13 +51,13 @@ const Body = () => {
             <div className="m-4 p-1 border border-gray-300 rounded-lg w-[40%]">
                 <input
                     type="text"
-                    placeholder="This search option is case sensitive..."
+                    placeholder="    Search..."
                     className="search-box w-full  h-10 "
                     onChange={(e) => setQuery(e?.target?.value?.toLowerCase())}
                 />
             </div>
 
-            <div className="w-[60%] flex justify-center items-center text-center bg-blue-300 rounded-lg">
+            <div className="w-[70%] flex justify-center items-center text-center bg-blue-300 rounded-lg">
                 <div className="container-heading p-2">
                     <span className="checkbox-text text-xl mt-4 text-white font-semibold">Pick Your Filter : </span>
 
@@ -71,7 +71,7 @@ const Body = () => {
                                     checked={!data.some((item) => item?.isChecked !== true)}
                                     onChange={handleChange}
                                 />
-                                <label className="form-check-text m-2 text-white font-semibold">All Select</label>
+                                <label className="form-check-text m-2 text-white font-semibold">Select All</label>
                             </div>
                             {data.map((item, index) => (
                                 <div className="form-check flex flex-row items-center" key={index}>
@@ -82,7 +82,7 @@ const Body = () => {
                                         checked={item?.isChecked || false}
                                         onChange={handleChange}
                                     />
-                                    <label className="form-check-text m-2 text-white font-semibold">{item.name}</label>
+                                    <label className="form-check-text m-2 text-white font-semibold">{item.name?.replaceAll("_"," ")?.toUpperCase()}</label>
                                 </div>
                             ))}
                         </div>
